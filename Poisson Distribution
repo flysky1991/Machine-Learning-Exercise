@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Nov 29 16:10:26 2017
+
+@author: Administrator
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+if __name__ =="__main__":
+    #设定λ为100
+    x = np.random.poisson(100,10000)
+    times = 200
+    
+    plt.hist(x,bins=times,normed=True,range=[0,times],color='g',alpha=0.75,label='Poisson Distribution')
+    plt.legend(loc="upper left")
+    plt.grid(True)
+    plt.show()
