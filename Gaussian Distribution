@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Nov 25 20:57:34 2017
+
+@author: Administrator
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+if __name__ =="__main__":
+    x = np.random.uniform(0.0,1.0,10000)
+    times = 10000
+    for time in range(times):
+        x += np.random.uniform(0.0,1.0,10000)
+    x /= times
+    plt.hist(u,100,facecolor='b',alpha=0.75,label='Gaussian Distribution')
+    plt.legend(loc="upper left")
+    plt.grid(True)
+    plt.show()
+    
