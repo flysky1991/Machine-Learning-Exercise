@@ -1,0 +1,29 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Nov 29 19:47:23 2017
+
+@author: Administrator
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+if __name__ =="__main__":
+    #通过赋予不同的λ值，比较不同曲线之间的区别，
+    lam1 = 0.5
+    x = np.arange(0,20,0.01)
+    y1 = lam1 * np.exp(-lam1*x)
+    plt.plot(x,y1,color='r',label='λ=0.5')
+    
+    lam2 = 0.3
+    y2 = lam2 * np.exp(-lam2*x)
+    plt.plot(x,y2,color='g',label='λ=0.3')
+    
+    lam3 = 0.1
+    y3 = lam3 * np.exp(-lam3*x)
+    plt.plot(x,y3,color='b',label='λ=0.1')
+    
+    plt.title('Expoential Distribution')
+    plt.legend(loc='upper right')
+    plt.grid(True)
+    plt.show()
