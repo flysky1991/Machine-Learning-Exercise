@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Nov 26 13:12:23 2017
+
+@author: Administrator
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+if __name__ =="__main__":
+    x = np.random.uniform(0.0,1.0,10000)
+    plt.hist(x,100,facecolor='g',alpha=0.75,label='Binomial Distribution')
+    plt.legend(loc="upper left")
+    plt.grid(True)
+    plt.show()
